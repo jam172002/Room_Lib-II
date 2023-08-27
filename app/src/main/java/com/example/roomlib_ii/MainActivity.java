@@ -34,16 +34,18 @@ public class MainActivity extends AppCompatActivity {
         db = DBHelper.getDB(this);
         List<Entity> ent = db.dao().getData();
 
-        for(int i = 0; i < ent.size(); i++){
+        for (int i = 0; i < ent.size(); i++) {
             Log.d("Data: ", " ID: " + ent.get(i).getId()
                     + " FirstName: " + ent.get(i).getfName()
                     + " LastName: " + ent.get(i).getlName()
-                    + " Grade: " + ent.get(i).getGrade() );
+                    + " Grade: " + ent.get(i).getGrade());
         }
 
         bind.reV.setLayoutManager(new LinearLayoutManager(this));
         adapter = new Adapter(this, ent);
         bind.reV.setAdapter(adapter);
+
+
     }
 
 

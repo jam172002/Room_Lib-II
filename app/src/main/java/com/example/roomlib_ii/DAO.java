@@ -15,5 +15,6 @@ public interface DAO {
     @Query("select * from My_Table")
     List<Entity> getData();
 
-
+    @Query("delete from My_Table where id = :uid")
+    void deleteById(int uid);
 }
