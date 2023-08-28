@@ -3,6 +3,7 @@ package com.example.roomlib_ii;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -17,4 +18,7 @@ public interface DAO {
 
     @Query("delete from My_Table where id = :uid")
     void deleteById(int uid);
+
+    @Update
+    void update(Entity entity);
 }

@@ -54,6 +54,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                         int id = menuItem.getItemId();
                         if (id == R.id.update){
                             Toast.makeText(context, "Updated", Toast.LENGTH_SHORT).show();
+
                             return true;
 
                         } else if (id == R.id.delete) {
@@ -111,4 +112,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         }
     }
+
+
 }
